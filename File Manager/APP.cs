@@ -1,18 +1,29 @@
 ﻿using System;
+using System.IO;
 
 namespace File_Manager
 {
     internal class APP : IManager
     {
-        public string Name => "stab";
+        public string Name => "app";
 
-        public string Description => "0.Пустое задание";
+        public string Description => "2.Для перехода к предыдущей папке введите: app ";
         /// <summary>
         /// заглушка
         /// </summary>
         public void Demo()
         {
-            Console.WriteLine("Пустой");
+            string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            DirectoryInfo di = new(dirName);
+            dirName = di.Parent.FullName;
+            string[] entriesTo = Directory.GetFileSystemEntries(dirName, "*" /*, SearchOption.AllDirectories*/);
+            Console.Clear();
+            for (int i = 0; i < entriesTo.Length; i++)
+            {
+                Console.WriteLine(entriesTo[i]);
+            }
+
+            Console.ReadKey();
 
         }
     }
