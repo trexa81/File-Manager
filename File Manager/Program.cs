@@ -12,8 +12,8 @@ namespace File_Manager
         /// </summary>
         private static List<IManager> _lessons = new List<IManager>()
         {
-            new CD (),
-            new APP (),
+            new CD(),
+            new APP(),
             new Inf(),
             new DEL(),
             new CP(),
@@ -34,13 +34,13 @@ namespace File_Manager
 
             Console.WriteLine(duplicate);
 
-            Console.WriteLine("Список заданий:");
+            Console.WriteLine("Список команд:");
             foreach (IManager lesson in _lessons)
             {
                 Console.WriteLine($"Код:{lesson.Name} ({lesson.Description})");
             }
-            Console.WriteLine("длязавершения задания введите: end");
-            Console.Write("для запуска задания введите его код: ");
+            Console.WriteLine("для завершения введите: end");
+            Console.Write("для запуска команды введите её код: ");
             while (true)
             {
                 string userInput = Console.ReadLine();
