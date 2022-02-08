@@ -9,7 +9,7 @@ namespace File_Manager
 
         public string Description => "2.Для перехода к предыдущей папке введите: app ";
         /// <summary>
-        /// заглушка
+        /// команда app
         /// </summary>
         public void Demo()
         {
