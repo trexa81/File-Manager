@@ -14,10 +14,10 @@ namespace File_Manager
         {
             new CD(),
             new APP(),
+            new INF(),
             new Inf(),
             new DEL(),
             new CP(),
-            new INF(),
             new END()
         };
 

@@ -4,11 +4,11 @@ namespace File_Manager
 {
     internal class INF : IManager
     {
-        public string Name => "inf";
+        public string Name => "INF";
 
-        public string Description => "3.Для получение данных о файле введите: inf ";
+        public string Description => "3.Для получение данных о каталоге введите: INF";
         /// <summary>
-        /// команда inf
+        /// команда INF
         /// </summary>
         public void Demo()
         {
