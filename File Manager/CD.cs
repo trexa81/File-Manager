@@ -17,13 +17,13 @@ namespace File_Manager
             Console.Write("Введите имя папки: ");
             string to = Console.ReadLine();
             string[] entries = Directory.GetFileSystemEntries(dirName + @"\" + to, "*");
-            //Console.Clear();
+
             for (int i = 0; i < entries.Length; i++)
             {
                 Console.WriteLine(entries[i]);
             }
             Console.ReadKey();
-
+            Console.Clear();
         }
     }
 }

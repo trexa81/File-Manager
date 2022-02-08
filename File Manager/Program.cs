@@ -58,7 +58,7 @@ namespace File_Manager
             /// <param name="userInput"></param>
             /*private*/ static void List<T>(string userInput)
             {
-                Console.Clear();
+                //Console.Clear();
                 foreach (IManager myLesson in _lessons)
                 {
                     if (myLesson.Name == userInput)

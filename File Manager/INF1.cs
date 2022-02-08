@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace File_Manager
 {
@@ -12,7 +13,14 @@ namespace File_Manager
         /// </summary>
         public void Demo()
         {
-            Console.WriteLine("Пустой");
+            string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            //Console.WriteLine("Введите имя каталога");
+            DirectoryInfo dirInfo = new(dirName);
+            Console.WriteLine($"Название каталога: {dirInfo.Name}");
+            Console.WriteLine($"Полное название каталога: {dirInfo.FullName}");
+            Console.WriteLine($"Время создания каталога: {dirInfo.CreationTime}");
+            Console.ReadKey();
+            Console.Clear();
 
         }
     }

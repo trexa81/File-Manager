@@ -28,8 +28,7 @@ namespace File_Manager
             {
                 Console.Write("Файла не существует! Для возврата нажмите любую кнопку... ");
                 Console.ReadKey();
-                //Main();
-            }
+                }
             Console.ReadKey();
             Console.Clear();
 
