@@ -21,7 +21,7 @@ namespace File_Manager
             new END()
         };
 
-        static void Main(string[] args)  //new branch
+        static void Main()  //new branch
         {
             string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string duplicate = new('=', 119);
@@ -32,8 +32,42 @@ namespace File_Manager
                 Console.WriteLine(entries[i]);  // вывод папок и файлов дериктории (по умолчанию) \Documents\
             }
 
-            Console.WriteLine(duplicate); 
+            Console.WriteLine(duplicate);
 
+            Console.WriteLine("Список заданий:");
+            foreach (IManager lesson in _lessons)
+            {
+                Console.WriteLine($"Код:{lesson.Name} ({lesson.Description})");
+            }
+            Console.WriteLine("длязавершения задания введите: end");
+            Console.Write("для запуска задания введите его код: ");
+            while (true)
+            {
+                string userInput = Console.ReadLine();
+                if (userInput != "end")
+                {
+                    List<T>(userInput);
+                }
+                break;
+            }
+
+            /// <summary>
+            /// выбор задания из списка
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="userInput"></param>
+            /*private*/ static void List<T>(string userInput)
+            {
+                Console.Clear();
+                foreach (IManager myLesson in _lessons)
+                {
+                    if (myLesson.Name == userInput)
+                    {
+                        myLesson.Demo();
+                    }
+                }
+                Main();
+            }
         }
     }
 }

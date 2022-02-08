@@ -4,9 +4,9 @@ namespace File_Manager
 {
     internal class CD : IManager
     {
-        public string Name => "stab";
+        public string Name => "cd";
 
-        public string Description => "0.Пустое задание";
+        public string Description => "1.Для перехода к папке введите: cd; затем её имя";
         /// <summary>
         /// заглушка
         /// </summary>
