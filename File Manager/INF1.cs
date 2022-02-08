@@ -14,8 +14,9 @@ namespace File_Manager
         public void Demo()
         {
             string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            //Console.WriteLine("Введите имя каталога");
-            DirectoryInfo dirInfo = new(dirName);
+            Console.Write("Введите имя каталога : ");
+            string to = @"\" + Console.ReadLine();
+            DirectoryInfo dirInfo = new(dirName + to);
             Console.WriteLine($"Название каталога: {dirInfo.Name}");
             Console.WriteLine($"Полное название каталога: {dirInfo.FullName}");
             Console.WriteLine($"Время создания каталога: {dirInfo.CreationTime}");

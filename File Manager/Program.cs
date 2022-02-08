@@ -23,14 +23,9 @@ namespace File_Manager
 
         static void Main()  //new branch
         {
-            string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string duplicate = new('=', 119);
             
-            string[] entries = Directory.GetFileSystemEntries(dirName, "" /*, SearchOption.AllDirectories*/);
-            for (int i = 0; i < entries.Length; i++)
-            {
-                Console.WriteLine(entries[i]);  // вывод папок и файлов дериктории (по умолчанию) \Documents\
-            }
+            string duplicate = new('=', 119);
+            DirName();
 
             Console.WriteLine(duplicate);
 
@@ -50,7 +45,6 @@ namespace File_Manager
                 }
                 break;
             }
-
             /// <summary>
             /// выбор задания из списка
             /// </summary>
@@ -67,6 +61,15 @@ namespace File_Manager
                     }
                 }
                 Main();
+            }
+        }
+        static void DirName()
+        {
+            string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string[] entries = Directory.GetFileSystemEntries(dirName, "" /*, SearchOption.AllDirectories*/);
+            for (int i = 0; i < entries.Length; i++)
+            {
+                Console.WriteLine(entries[i]);  // вывод папок и файлов дериктории (по умолчанию) \Documents\
             }
         }
     }

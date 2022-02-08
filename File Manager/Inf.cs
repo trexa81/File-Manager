@@ -26,12 +26,23 @@ namespace File_Manager
             }
             else
             {
-                Console.Write("Файла не существует! Для возврата нажмите любую кнопку... ");
+                Console.WriteLine("Файла не существует! Для возврата нажмите любую кнопку... ");
                 Console.ReadKey();
                 }
             Console.ReadKey();
-            Console.Clear();
 
+            Console.WriteLine("Для возврата введите : end \nДля продолжения нажмите: Enter");
+            while (true)
+            {
+                string userInput = Console.ReadLine();
+                if (userInput != "end")
+                {
+                    //DirName();
+                    Demo();
+                }
+                break;
+            }
+            Console.Clear();
         }
     }
 }
