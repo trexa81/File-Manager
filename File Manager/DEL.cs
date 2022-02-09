@@ -1,18 +1,37 @@
 ﻿using System;
+using System.IO;
 
 namespace File_Manager
 {
     internal class DEL : IManager
     {
-        public string Name => "stab";
+        public string Name => "del";
 
-        public string Description => "0.Пустое задание";
+        public string Description => "5.Для удаления файла введите: del";
         /// <summary>
         /// заглушка
         /// </summary>
         public void Demo()
         {
-            Console.WriteLine("Пустой");
+            string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            Console.WriteLine("Введите имя файла с его расширением");
+            string to = Console.ReadLine();
+            string path = dirName + @"\" + to;
+            FileInfo fileInf = new(path);
+            if (fileInf.Exists)
+            {
+                File.Delete(path);
+                Console.Write("Файл {0} удален", to);
+            }
+            else
+            {
+                Console.Write("Файла не существует! Для возврата нажмите любую кнопку... ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+            Console.ReadKey();
+            Console.Clear();
 
         }
     }
