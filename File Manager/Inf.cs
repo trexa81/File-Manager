@@ -1,12 +1,16 @@
 ﻿using System;
 using System.IO;
+using NPOI.SS.Formula.Functions;
+using System.Collections.Generic;
+
 
 namespace File_Manager
 {
     internal class Inf : IManager
     {
+        
         public string Name => "inf";
-
+        
         public string Description => "4.Для получение данных о файле введите: inf";
         /// <summary>
         /// команда inf
@@ -28,16 +32,17 @@ namespace File_Manager
             {
                 Console.WriteLine("Файла не существует! Для возврата нажмите любую кнопку... ");
                 Console.ReadKey();
-                }
-            Console.ReadKey();
+            }
+            //Console.ReadKey();
 
             Console.WriteLine("Для возврата введите : end \nДля продолжения нажмите: Enter");
             while (true)
             {
+
                 string userInput = Console.ReadLine();
                 if (userInput != "end")
                 {
-                    //DirName();
+                    
                     Demo();
                 }
                 break;

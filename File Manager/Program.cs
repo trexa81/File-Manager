@@ -63,7 +63,7 @@ namespace File_Manager
                 Main();
             }
         }
-        static void DirName()
+        public static void DirName()
         {
             string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string[] entries = Directory.GetFileSystemEntries(dirName, "" /*, SearchOption.AllDirectories*/);
