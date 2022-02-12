@@ -3,26 +3,28 @@ using System.IO;
 
 namespace File_Manager
 {
-    internal class CP : IManager
+    internal class CPfile : IManager
     {
-        public string Name => "CP";
+        public string Name => "cp";
 
-        public string Description => "6.Для перемещения каталога введите: CP";
+        public string Description => "7.Для копирования файла введите: cp";
         /// <summary>
         /// заглушка
         /// </summary>
         public void Demo()
         {
             string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            Console.WriteLine("Введите имя папки");
+            Console.WriteLine("Введите имя файла с его расширением");
             string to = @"\" + Console.ReadLine();
             string path = dirName + to;
-            Console.WriteLine("Введите имя папки в которую вы хотите переместить:" + to);
+            Console.WriteLine("Введите имя папки в которую вы хотите скопировать файл");
             string toto = dirName + @"\" + Console.ReadLine() + to;
-            DirectoryInfo dirInfo = new(dirName);
-            if (dirInfo.Exists && Directory.Exists(toto) == false)
+            Console.WriteLine(path + " * " + toto);
+            Console.ReadKey();
+            FileInfo fileInf = new(path);
+            if (fileInf.Exists)
             {
-                dirInfo.MoveTo(toto);
+                File.Copy(path, toto, true);
             }
             else
             {

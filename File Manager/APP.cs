@@ -8,6 +8,7 @@ namespace File_Manager
         public string Name => "app";
 
         public string Description => "2.Для перехода к предыдущей папке введите: app ";
+
         /// <summary>
         /// команда app
         /// </summary>
@@ -24,7 +25,6 @@ namespace File_Manager
             }
 
             Console.ReadKey();
-
         }
     }
 }

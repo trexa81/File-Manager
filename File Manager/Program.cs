@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace File_Manager
 {
-    internal class Program
+    public class Program
     {
         /// <summary>
         /// команды
@@ -18,10 +18,11 @@ namespace File_Manager
             new Inf(),
             new DEL(),
             new CP(),
+            new CPfile(),
             new END()
         };
 
-        static void Main()  //new branch
+        static void Main()  //new branch 
         {
             
             string duplicate = new('=', 119);
