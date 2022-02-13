@@ -24,9 +24,8 @@ namespace File_Manager
 
         static void Main()  //new branch 
         {
-            
             string duplicate = new('=', 119);
-            DirName();
+            StructureHelper.DirName();
 
             Console.WriteLine(duplicate);
 
@@ -64,14 +63,6 @@ namespace File_Manager
                 Main();
             }
         }
-        public static void DirName()
-        {
-            string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string[] entries = Directory.GetFileSystemEntries(dirName, "" /*, SearchOption.AllDirectories*/);
-            for (int i = 0; i < entries.Length; i++)
-            {
-                Console.WriteLine(entries[i]);  // вывод папок и файлов дериктории (по умолчанию) \Documents\
-            }
-        }
+       
     }
 }

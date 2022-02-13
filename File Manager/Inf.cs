@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace File_Manager
 {
-    internal class Inf : IManager
+    internal class Inf : Structure, IManager
     {
         
         public string Name => "inf";
@@ -17,6 +17,7 @@ namespace File_Manager
         /// </summary>
         public void Demo()
         {
+            GetDirName();
             string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             Console.WriteLine("Введите имя файла с его расширением");
             string to = @"\" + Console.ReadLine();
@@ -49,5 +50,6 @@ namespace File_Manager
             }
             Console.Clear();
         }
+
     }
 }
