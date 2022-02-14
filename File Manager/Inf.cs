@@ -17,7 +17,6 @@ namespace File_Manager
         /// </summary>
         public void Demo()
         {
-            GetDirName();
             string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             Console.WriteLine("Введите имя файла с его расширением");
             string to = @"\" + Console.ReadLine();
@@ -43,7 +42,8 @@ namespace File_Manager
                 string userInput = Console.ReadLine();
                 if (userInput != "end")
                 {
-                    
+                    Console.Clear();
+                    GetDirName();
                     Demo();
                 }
                 break;

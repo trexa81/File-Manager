@@ -25,6 +25,7 @@ namespace File_Manager
         static void Main()  //new branch 
         {
             string duplicate = new('=', 119);
+            Console.Clear();
             StructureHelper.DirName();
 
             Console.WriteLine(duplicate);
