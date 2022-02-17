@@ -5,31 +5,19 @@ namespace File_Manager
 {
     internal class DEL : IManager
     {
-        public string Name => "del";
+        public string Name => "DEL";
 
-        public string Description => "5.Для удаления файла введите: del";
+        public string Description => "5.Для удаления каталога введите: DEL";
         /// <summary>
-        /// заглушка
+        /// удаления каталога
         /// </summary>
         public void Demo()
         {
             string dirName = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            Console.WriteLine("Введите имя файла с его расширением");
-            string to = Console.ReadLine();
-            string path = dirName + @"\" + to;
-            FileInfo fileInf = new(path);
-            if (fileInf.Exists)
-            {
-                File.Delete(path);
-                Console.Write("Файл {0} удален", to);
-            }
-            else
-            {
-                Console.Write("Файла не существует! Для возврата нажмите любую кнопку... ");
-                Console.ReadKey();
-                Console.Clear();
-            }
-
+            Console.WriteLine("Введите имя каталога");
+            string to = @"\" + Console.ReadLine();
+            string path = dirName + to;
+            Directory.Delete(path, true);
             Console.ReadKey();
             Console.Clear();
 

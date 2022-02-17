@@ -17,9 +17,10 @@ namespace File_Manager
             new INF(),
             new Inf(),
             new DEL(),
+            new DELfile(),
             new CP(),
-            new CPfile(),
-            new END()
+            new CPfile()
+            //new END()  // заглушка
         };
 
         static void Main()  //new branch 

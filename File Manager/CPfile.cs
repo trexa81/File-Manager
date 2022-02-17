@@ -7,7 +7,7 @@ namespace File_Manager
     {
         public string Name => "cp";
 
-        public string Description => "7.Для копирования файла введите: cp";
+        public string Description => "8.Для копирования файла введите: cp";
         /// <summary>
         /// заглушка
         /// </summary>

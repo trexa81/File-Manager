@@ -7,7 +7,7 @@ namespace File_Manager
     {
         public string Name => "CP";
 
-        public string Description => "6.Для перемещения каталога введите: CP";
+        public string Description => "7.Для перемещения каталога введите: CP";
         /// <summary>
         /// заглушка
         /// </summary>
